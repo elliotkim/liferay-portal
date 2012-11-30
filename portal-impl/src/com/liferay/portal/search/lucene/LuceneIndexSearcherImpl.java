@@ -125,8 +125,7 @@ public class LuceneIndexSearcherImpl implements IndexSearcher {
 					JSONObject dataJSONObject = facetConfiguration.getData();
 
 					if (dataJSONObject.has("maxTerms")) {
-						multiValueFacetHandler.setMaxItems(
-							dataJSONObject.getInt("maxTerms"));
+						multiValueFacetHandler.setMaxItems(PropsValues.MAX_TERMS);
 					}
 
 					facetHandlers.add(multiValueFacetHandler);

@@ -100,11 +100,11 @@ if (!advancedConfiguration && Validator.isNull(searchConfiguration)) {
 	}
 
 	if (displayAssetTagsFacet) {
-		sb.append("{className: 'com.liferay.portal.kernel.search.facet.MultiValueFacet', data: {displayStyle: 'list', frequencyThreshold: 1, maxTerms: 10, showAssetCount: true}, displayStyle: 'asset_tags', fieldName: 'assetTagNames', label: 'tag', order: 'OrderHitsDesc', static: false, weight: 1.4},");
+		sb.append("{className: 'com.liferay.portal.kernel.search.facet.MultiValueFacet', data: {displayStyle: 'list', frequencyThreshold: 1, maxTerms: PropsValues.MAX_TERMS, showAssetCount: true}, displayStyle: 'asset_tags', fieldName: 'assetTagNames', label: 'tag', order: 'OrderHitsDesc', static: false, weight: 1.4},");
 	}
 
 	if (displayAssetCategoriesFacet) {
-		sb.append("{className: 'com.liferay.portal.kernel.search.facet.MultiValueFacet', data: {displayStyle: 'list', frequencyThreshold: 1, maxTerms: 10, showAssetCount: true}, displayStyle: 'asset_tags', fieldName: 'assetCategoryTitles', label: 'category', order: 'OrderHitsDesc', static: false, weight: 1.3},");
+		sb.append("{className: 'com.liferay.portal.kernel.search.facet.MultiValueFacet', data: {displayStyle: 'list', frequencyThreshold: 1, maxTerms: PropsValues.MAX_TERMS, showAssetCount: true}, displayStyle: 'asset_tags', fieldName: 'assetCategoryTitles', label: 'category', order: 'OrderHitsDesc', static: false, weight: 1.3},");
 	}
 
 	if (displayModifiedRangeFacet) {
